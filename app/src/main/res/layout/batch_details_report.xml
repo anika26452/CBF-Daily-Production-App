@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:id="@+id/orderListRow"
+        android:gravity="center">
+        <TextView
+            android:text="date"
+            android:id="@+id/pro_date"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+
+            android:text="age"
+            android:id="@+id/bairdage"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:id="@+id/birdsno"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Birds On Hand"
+            android:textSize="12sp"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="18"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:id="@+id/mortality"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="mortality"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="18"
+            android:textSize="12sp"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:id="@+id/feed1"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Feed1"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="12"
+            android:textSize="12sp"
+            android:gravity="center">
+        </TextView>
+        <TextView
+            android:id="@+id/feed2"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Feed2"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:layout_width="0dp"
+            android:layout_weight="11"
+            android:gravity="center">
+        </TextView>
+        <TextView
+            android:id="@+id/feed3"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:text="Feed3"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:textSize="12sp"
+            android:layout_weight="11"
+            android:gravity="center">
+        </TextView>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c6c7c7"
+        android:layout_margin="0dp"/>
+
+</LinearLayout>

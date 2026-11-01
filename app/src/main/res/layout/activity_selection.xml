@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Activity.Menu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/usertextvw"
+            android:layout_width="match_parent"
+            android:text="User :  "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#096a6b"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:layout_marginTop="35dp"
+            android:id="@+id/data_entrybutton_id"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="#119898"
+            android:text="Data Entry"
+            android:textAllCaps="false"
+            />
+        <Button
+            android:id="@+id/send_button_id"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="#119898"
+            android:text="Saved Reports"
+            android:padding="20dp"
+            android:textAllCaps="false"
+            />
+        <Button
+            android:id="@+id/farmer_geoloc_button_id"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="#119898"
+            android:text="Set Farmer's Geo Location"
+            android:padding="20dp"
+            android:textAllCaps="false"
+            />
+        <Button
+            android:visibility="gone"
+            android:id="@+id/survey_button_id"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="#119898"
+            android:text="Survey"
+            android:padding="20dp"
+            android:textAllCaps="false"
+            />
+        <Button
+            android:id="@+id/farmer_info_button_id"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="#119898"
+            android:text="Batch Summary Report"
+            android:padding="20dp"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/IFTF_Request_button_id"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="#119898"
+            android:text="IFTF Request"
+            android:padding="20dp"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/IFTF_Send_button_id"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="#119898"
+            android:text="IFTF Send"
+            android:padding="20dp"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/IFTF_Received_button_id"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:background="#119898"
+            android:text="IFTF Received"
+            android:padding="20dp"
+            android:textAllCaps="false"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+

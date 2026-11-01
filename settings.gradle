@@ -1,0 +1,4 @@
+rootProject.name = "CBF_DailyProductionApp"
+include ':app'
+//include ':mylibrary'
+include ':searchablespinnerlibrary'

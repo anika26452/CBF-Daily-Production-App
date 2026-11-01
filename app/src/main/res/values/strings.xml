@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">CBF Daily Production App</string>
+    <string name="splash_screeen_string">CBF Daily Production App</string>
+    <string name="app_version">Version : 4.0</string>
+    <string name="app_v">4.0</string>
+    <string name="sysnova">Powered By Sysnova Information Systems Limited</string>
+    <string name="gps_network_not_enabled">Gps network is not Enable</string>
+    <string name="open_location_settings">Enable</string>
+    <string name="Cancel">Cancel</string>
+
+    <string-array name="feedmillArray_list">
+        <item>Nourish</item>
+        <item>Quality</item>
+        <item>Paragon</item>
+        <item>ACI</item>
+        <item>Aman</item>
+        <item>Provita</item>
+        <item>RRP</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="min_list_array">
+
+        <item>-</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+        <item>60</item>
+    </string-array>
+
+    <string-array name="hour_list_array">
+
+        <item>-</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="ampm_list_array">
+
+        <item>-</item>
+        <item>am</item>
+        <item>pm</item>
+
+    </string-array>
+
+    <string-array name="product_name_arrays">
+
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+
+
+    </string-array>
+
+    <string-array name="feed_code_arrays">
+
+        <item>code 1</item>
+        <item>code 2</item>
+        <item>code 3</item>
+    </string-array>
+
+    <!--added by Shanzida 2024-03-11 For IFTF Request Form-->
+    <string-array name="TransferReason_arrays">
+        <item>Farm Closed</item>
+        <item>Feed Shortage</item>
+        <item>Other Reasons</item>
+    </string-array>
+
+    <string-array name="Transportation_arrays">
+        <item>Van</item>
+        <item>Others</item>
+    </string-array>
+</resources>

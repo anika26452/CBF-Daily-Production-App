@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.GetPhoneNumber">
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_marginTop="25dp"
+        android:text="Today's Auctions"
+        android:padding="15dp"
+        android:backgroundTint="@color/green"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:onClick="GetNumber"
+        android:layout_height="wrap_content">
+    </Button>
+
+</LinearLayout>

@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Activity.FarmerInfoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Farmers Code "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp" />
+
+            <EditText
+                android:id="@+id/farmers_code_id"
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:textColor="@android:color/black">
+
+            </EditText>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".2"
+                android:src="@drawable/checkcode"
+                android:background="#119898"
+                android:onClick="loadFarmerInfo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="17dp">
+
+            <TextView
+                android:id="@+id/fname"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="Farmer's Name : "
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="start">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="17dp">
+
+            <TextView
+                android:id="@+id/fbatch"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="Farmer's Batch : "
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="start">
+            </TextView>
+
+            <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+                android:id="@+id/batch_idlist_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:entries="@array/product_name_arrays"
+                android:spinnerMode="dropdown"
+                android:layout_marginLeft="5dp"
+                ></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="17dp">
+
+            <TextView
+                android:id="@+id/bqty"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="Bird QTY            : "
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="start">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="17dp">
+
+            <TextView
+                android:id="@+id/sdate"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:text="Start Date          : "
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="start">
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/feedsummarylayout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background = "#096a6b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:text="Production Date"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:textColor="@color/backgroundcolor"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="10"
+                android:text="Age"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:textColor="@color/backgroundcolor"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/backgroundcolor"
+                android:text="Birds On Hand"
+                android:textSize="11sp"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="18"
+                android:textStyle="bold"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/backgroundcolor"
+                android:text="Total No Of Mortality"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="18"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/backgroundcolor"
+                android:text="Feed1"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="12"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:gravity="center">
+            </TextView>
+            <TextView
+                android:textColor="@color/backgroundcolor"
+                android:text="Feed2"
+                android:layout_height="match_parent"
+                android:textSize="11sp"
+                android:layout_width="0dp"
+                android:layout_weight="11"
+                android:textStyle="bold"
+                android:gravity="center">
+            </TextView>
+            <TextView
+                android:textColor="@color/backgroundcolor"
+                android:text="Feed3"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:textSize="11sp"
+                android:layout_weight="11"
+                android:textStyle="bold"
+                android:gravity="center">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bird_list_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="170dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:weightSum="100"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="30"
+                android:layout_width="0dp"
+                android:text="Total"
+                android:textColor="#096a6b"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:layout_weight="14"
+                android:layout_width="0dp"
+                android:text=""
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#096a6b"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/totalmortality"
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:text="0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#096a6b"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/totalfeed1"
+                android:layout_weight="12"
+                android:layout_width="0dp"
+                android:text="0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#096a6b"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/totalfeed2"
+                android:layout_weight="12"
+                android:layout_width="0dp"
+                android:text="0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#096a6b"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+            </TextView>
+
+            <TextView
+                android:id="@+id/totalfeed3"
+                android:layout_weight="12"
+                android:layout_width="0dp"
+                android:text="0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#096a6b"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:text="Feed Summary Report"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#096a6b"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="100"
+            android:background = "#096a6b"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="25"
+                android:text="Feed Code"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/backgroundcolor"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="25"
+                android:text="RecieveQTY"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/backgroundcolor"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="25"
+                android:text="IssueQTY"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/backgroundcolor"
+                android:gravity="center">
+            </TextView>
+
+            <TextView
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="25"
+                android:text="RemainingQTY"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/backgroundcolor"
+                android:gravity="center">
+            </TextView>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/feed_list_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:weightSum="100"-->
+            <!--android:layout_marginTop="5dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/fdqty1"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="#096a6b"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/rcvqty1"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/issueqty1"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/rmnqty1"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+        <!--</LinearLayout>-->
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="#c6c7c7"-->
+                <!--android:layout_margin="0dp"/>-->
+
+       <!---->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:weightSum="100"-->
+            <!--android:layout_marginTop="5dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/fdqty2"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="#096a6b"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/rcvqty2"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/issueqty2"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/rmnqty2"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+        <!--</LinearLayout>-->
+
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="#c6c7c7"-->
+                <!--android:layout_margin="0dp"/>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:weightSum="100"-->
+            <!--android:layout_marginTop="5dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/fdqty3"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="#096a6b"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/rcvqty3"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/issueqty3"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/rmnqty3"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_weight="25"-->
+                <!--android:text="1"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textStyle="bold"-->
+                <!--android:textSize="12sp"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:gravity="center">-->
+            <!--</TextView>-->
+            <!--</LinearLayout>-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:background="#c6c7c7"-->
+                <!--android:layout_margin="0dp"/>-->
+
+            <TextView
+                android:layout_height="50dp"
+                android:layout_width="0dp"
+                android:layout_weight="25"
+                android:text=""
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:gravity="center">
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

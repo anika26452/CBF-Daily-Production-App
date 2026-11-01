@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundcolor"
+    android:orientation="vertical">
+
+    <LinearLayout
+            android:id="@+id/replyListRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100">
+
+        <TextView
+            android:text=""
+            android:id="@+id/reply_time"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="44"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:id="@+id/qty_id"
+            android:text=""
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="28"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:gravity="center">
+        </TextView>
+
+        <TextView
+            android:text=""
+            android:id="@+id/rate_id"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="28"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:gravity="center">
+        </TextView>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_margin="10dp"
+        android:background="@color/grey" />
+
+</LinearLayout>

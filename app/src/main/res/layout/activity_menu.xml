@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/backgroundcolor"
+    tools:context="com.sysnova.cbfdailyproductionapp.Activity.Menu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/emaployeedetailslayoutshape"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/manager">
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/name_textvw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="Employee Name "
+                        android:textColor="@color/appcolor"
+                        android:textStyle="bold"
+                        android:textSize="16sp">
+                    </TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/data_entrybutton_id"
+                android:layout_marginTop="25dp"
+                android:text="New Data Entry"
+                android:padding="15dp"
+                android:backgroundTint="@color/green"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </Button>
+
+            <Button
+                android:id="@+id/send_button_id"
+                android:layout_marginTop="8dp"
+                android:text="Saved Reports"
+                android:padding="15dp"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </Button>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/farmer_geoloc_button_id"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:backgroundTint="@color/orange"
+                android:text="Set Farmer's GEO Location"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/farmer_info_button_id"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:backgroundTint="@color/teal_700"
+                android:text="Batch Summery Report"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <Button
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/IFTF_Request_button_id"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:backgroundTint="@color/green"
+                android:text="IFT Request"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/IFTF_Send_button_id"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:backgroundTint="@color/blue"
+                android:text="IFT Send"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <Button
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/IFTF_Received_button_id"
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:backgroundTint="@color/kfg_orange"
+                android:text="IFT Received"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textAllCaps="false"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/change_password"
+                android:layout_marginTop="10dp"
+                android:text="Change Password"
+                android:padding="15dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/bluegrey"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </Button>
+
+            <Button
+                android:id="@+id/log_out"
+                android:layout_marginTop="10dp"
+                android:text="Log Out"
+                android:padding="15dp"
+                android:textAllCaps="false"
+                android:backgroundTint="@color/dark_ash"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </Button>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

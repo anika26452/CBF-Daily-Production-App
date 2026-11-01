@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="5dp">
+
+
+        <TextView
+            android:text="farmerCode"
+            android:id="@+id/farmerCode"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="40"
+            android:padding="5sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black">
+        </TextView>
+
+        <TextView
+            android:text="batchCode"
+            android:id="@+id/batchCode"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="40"
+            android:padding="5sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/black">
+        </TextView>
+
+
+        <TextView
+            android:text="Details"
+            android:id="@+id/summary_details"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="20"
+            android:padding="5sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="@color/kfg_orange">
+        </TextView>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_margin="0dp"/>
+
+</LinearLayout>

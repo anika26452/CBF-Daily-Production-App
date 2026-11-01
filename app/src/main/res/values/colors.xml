@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="stausbar">#ad161d</color>
+    <color name="kfg_red">#ed2931</color>
+    <color name="brac_black">#1a1618</color>
+    <color name="brac_blue">#0b79bf</color>
+    <color name="dark_ash">#ff5f56</color>
+    <color name="colorPrimary">#B43104</color>
+    <color name="colorPrimaryDark">#e3e3e3</color>
+    <color name="colorAccent">#CB9348</color>
+    <color name="bracgreen">#97c740</color>
+    <color name="darkgreen">#2f5712</color>
+    <color name="red">#fc2221</color>
+    <color name="grey">#81858a</color>
+    <color name="orange">#FFA501</color>
+    <color name="home_background">#DABC01</color>
+    <color name="backgroundcolor">#fcfcfc</color>
+    <color name="blue">#016abd</color>
+    <color name="yellow">#ffbd2e</color>
+    <color name="pink">#072C40</color>
+    <color name="deepgreen">#073C01</color>
+    <color name ="teal_300"> #4DB6AC</color>
+    <color name="bluegrey">#455964</color>
+    <color name="appcolor">#B8706B</color>
+    <color name="green">#079e57</color>
+    <color name="kfg_orange">#D0401C</color>
+</resources>

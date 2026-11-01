@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <EditText
+        android:id="@+id/qtyedittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/appcolor"
+        android:gravity="center"
+        android:hint="Enter the OTP sent your phone"
+        android:inputType="number"
+        android:textColor="@color/black">
+
+    </EditText>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_below="@+id/qtyedittext"
+        android:layout_marginTop="15dp"
+        android:layout_alignEnd="@id/qtyedittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Cancel"
+            android:background="@color/white"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:layout_marginRight="20dp"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:id="@+id/cancelbtn"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+        <Button
+            android:id="@+id/donebtn"
+            android:text="Done"
+            android:background="@color/white"
+            android:textColor="@color/appcolor"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </Button>
+    </LinearLayout>
+
+</RelativeLayout>

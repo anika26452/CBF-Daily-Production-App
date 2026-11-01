@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    tools:context=".Activity.EggBidHistory">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/emaployeedetailslayoutshape"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/manager">
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/emp_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="Employee Name "
+                        android:textColor="@color/appcolor"
+                        android:textStyle="bold"
+                        android:textSize="16sp">
+                    </TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Auction Date"
+                android:layout_weight="20"
+                android:textColor="@color/appcolor"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text=":"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/appcolor"
+                android:layout_weight="5"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/datetxtvw"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Current date"
+                android:paddingLeft="10dp"
+                android:layout_weight="30"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp">
+
+            </TextView>
+            <ImageView
+                android:onClick="onClickDatePicker"
+                android:layout_weight="10"
+                android:id="@+id/replydate_btn"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"
+                android:layout_width="25dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center"
+                android:layout_height="35dp"
+                android:src="@drawable/calendar">
+            </ImageView>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:id="@+id/header_textView"
+            android:text="আমার নিলামের ইতিহাস"
+            android:textSize="20sp"
+            android:textColor="@color/pink"
+            android:textStyle="bold"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/appcolor"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:weightSum="100">
+
+            <TextView
+                android:text="Auction No"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_gravity="center">
+            </TextView>
+
+            <TextView
+                android:text="Offer Price"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_gravity="center">
+            </TextView>
+
+            <TextView
+                android:text="Bid Qty"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:textSize="12sp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_gravity="center">
+            </TextView>
+
+            <TextView
+                android:text="Bid Price"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_gravity="center">
+            </TextView>
+
+            <TextView
+                android:textColor="@color/white"
+                android:text="Detail"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="20"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_gravity="center">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_weight="67"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bidreplylist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

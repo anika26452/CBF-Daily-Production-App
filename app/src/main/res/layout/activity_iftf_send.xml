@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/white"
+    tools:context=".Activity.IFTFRequestSendActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="20dp">
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:padding="10dp"
+                android:id="@+id/get_loc_btn"
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:layout_height="match_parent"
+                android:background="#119898"
+                android:text="Get Location "
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/lat_linearlayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lat_textvw"
+                android:layout_width="wrap_content"
+                android:text="Latitude   : "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/long_textvw"
+                android:layout_width="match_parent"
+                android:text="Longitude  : "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/long_linearlayout"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Request : "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp" />
+
+
+            <Spinner
+                android:id="@+id/iftf_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:padding="5dp"
+                android:enabled="false"
+                android:background="@android:drawable/btn_dropdown"
+                android:textColor="@android:color/black"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Organization : "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/org_name_txt"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text=""
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:text="Farmers Code From"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp" />
+
+
+            <EditText
+                    android:id="@+id/farmers_code_id"
+                    android:layout_width="0dp"
+                    android:layout_weight=".5"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:backgroundTint="@android:color/holo_green_dark"
+                    android:textColor="@android:color/black">
+
+            </EditText>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:src="@drawable/checkcode"
+                android:background="#119898"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:text="Farmers From :"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/farmer_name_txt"
+            android:layout_width="0dp"
+            android:layout_weight=".6"
+            android:text=""
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Warehouse To :"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp" />
+
+            <Spinner
+                android:id="@+id/whTo_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:padding="5dp"
+                android:enabled="false"
+                android:textColor="@android:color/black"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Batch From "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/BatchFrom_EditText"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:textColor="@android:color/black">
+            </EditText>
+
+            <Spinner
+                android:id="@+id/BatchFrom_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.6"
+                android:padding="5dp"
+                android:enabled="false"
+                android:textColor="@android:color/black"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".35"
+                android:text="Farmers Code To"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp" />
+
+
+            <EditText
+                android:id="@+id/farmersTo_code_id"
+                android:layout_width="0dp"
+                android:layout_weight=".55"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:textColor="@android:color/black">
+
+            </EditText>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:src="@drawable/checkcode"
+                android:background="#119898"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Farmers To :"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/farmerTo_name_txt"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text=""
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="10dp"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".3"
+            android:text="Batch To "
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:layout_marginTop="10dp"
+            />
+        <EditText
+            android:id="@+id/BatchTo_EditText"
+            android:layout_width="0dp"
+            android:layout_weight=".6"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:textColor="@android:color/black">
+
+        </EditText>
+        <Spinner
+            android:id="@+id/BatchTo_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:padding="5dp"
+            android:enabled="false"
+            android:textColor="@android:color/black"
+            android:visibility="gone"
+            />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="15dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:text="Feed Type"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginLeft="20dp"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:text="Quantity"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="end"
+                android:layout_marginRight="25dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:text="1. Starter "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                />
+            <CheckBox
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="calendar1.png"
+                android:textColor="@android:color/white"
+                android:id="@+id/Starter_checkbox"
+                android:layout_marginTop="10dp"
+                android:layout_weight=".1"
+                android:layout_below="@+id/password_editText"
+                android:backgroundTintMode="screen"
+                android:buttonTint="@color/colorAccent"
+
+                />
+            <EditText
+                android:id="@+id/Starterqty_id"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:inputType="number"
+                android:textColor="@android:color/black">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:text="2. Grower crumble"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                />
+
+            <EditText
+                android:id="@+id/Grower_crumbleqty_id"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:inputType="number"
+                android:textColor="@android:color/black">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:text="3. Grower"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                />
+            <CheckBox
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Remember Me"
+                android:textColor="@android:color/white"
+                android:id="@+id/Grower_checkbox"
+                android:layout_marginTop="10dp"
+                android:layout_weight=".1"
+                android:layout_below="@+id/password_editText"
+                android:backgroundTintMode="screen"
+                android:buttonTint="@color/colorAccent"
+
+                />
+            <EditText
+                android:id="@+id/Growerqty_id"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:inputType="number"
+                android:textColor="@android:color/black">
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:text="4. Finisher"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                />
+            <CheckBox
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Remember Me"
+                android:textColor="@android:color/white"
+                android:id="@+id/Finisher_checkbox"
+                android:layout_marginTop="10dp"
+                android:layout_weight=".1"
+                android:layout_below="@+id/password_editText"
+                android:backgroundTintMode="screen"
+                android:buttonTint="@color/colorAccent"
+
+                />
+            <EditText
+                android:id="@+id/Finisherqty_id"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:inputType="number"
+                android:textColor="@android:color/black">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Transfer Date "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/visit_dateEditText_id"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:textColor="@android:color/black"
+                android:backgroundTint="@android:color/holo_green_dark"
+                >
+
+            </EditText>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".1"
+                android:layout_marginTop="5dp"
+                android:id="@+id/datePicker_imagebutton1"
+                android:onClick="onClickDatePicker"
+                android:background="@android:color/transparent"
+                android:src="@drawable/calendar1"
+                android:layout_marginRight="5dp"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Transfer Cost "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/TransferCost_id"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/black"
+                >
+
+            </EditText>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:text="TK"
+                android:textColor="@android:color/black"
+                >
+
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:text="Transfer By Code"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp" />
+
+
+            <EditText
+                android:id="@+id/TransferBy_code_id"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:textColor="@android:color/black">
+
+            </EditText>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".1"
+                android:src="@drawable/checkcode"
+                android:background="#119898"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Transfer By :"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/TransferBy_name_txt"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:text=""
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Transportation"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                />
+
+            <EditText
+                android:id="@+id/Transportation_EditText"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:textColor="@android:color/black">
+
+            </EditText>
+            <!--<RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".6"
+                android:layout_marginBottom="1dp"
+                >
+
+                <Spinner
+                    android:id="@+id/Transportation_list_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:entries="@array/Transportation_arrays"
+                    android:spinnerMode="dropdown"
+                    android:layout_marginLeft="5dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:textColor="@android:color/black"
+
+                    >
+                </Spinner>
+            </RelativeLayout>-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Distance :"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/mortality_amount_id"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:inputType="number"
+                android:textColor="@android:color/black">
+            </EditText>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".1"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:text="km"
+                android:textColor="@android:color/black"
+                >
+            </TextView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".4"
+                android:text="Transfer Reason"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/TransferReason_EditText"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:textColor="@android:color/black">
+
+            </EditText>
+            <!--<RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".5"
+                android:layout_marginBottom="1dp"
+                >
+
+                <Spinner
+                    android:id="@+id/TransferReason_list_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:entries="@array/TransferReason_arrays"
+                    android:spinnerMode="dropdown"
+                    android:layout_marginLeft="5dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:textColor="@android:color/black"
+                    >
+                </Spinner>
+            </RelativeLayout>-->
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight=".3"
+                android:text="Description "
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginTop="10dp"
+                />
+            <EditText
+                android:id="@+id/suggestion_id"
+                android:layout_width="0dp"
+                android:layout_weight=".6"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="5dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:textColor="@android:color/black"
+                >
+
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginBottom="50dp">
+
+            <Button
+                android:id="@+id/refresh_btn_id"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/bluegrey"
+                android:onClick="refreshFromUI"
+                android:padding="10dp"
+                android:text="Refresh"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/save_btn_id"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/kfg_orange"
+                android:padding="10dp"
+                android:text="Send"
+                android:textAllCaps="true" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
